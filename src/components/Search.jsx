@@ -6,7 +6,7 @@ import { useGlobalContext } from '../context/context';
 const Search = () => {
   const [user, setUser] = useState('');
 
-  const { requests } = useGlobalContext();
+  const { requests, error } = useGlobalContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,6 +18,11 @@ const Search = () => {
   return (
     <section className="section">
       <Wrapper className="section-center">
+        {error.show && (
+          <ErrorWrapper>
+            <p>{error.msg}</p>
+          </ErrorWrapper>
+        )}
         <form onSubmit={handleSubmit}>
           <div className="form-control">
             <MdSearch />
@@ -112,6 +117,19 @@ const Wrapper = styled.div`
     margin-bottom: 0;
     color: var(--clr-grey-5);
     font-weight: 400;
+  }
+`;
+
+const ErrorWrapper = styled.article`
+  position: absolute;
+  width: 90vw;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  text-transform: capitalize;
+  p {
+    color: red;
+    letter-spacing: var(--spacing);
   }
 `;
 
