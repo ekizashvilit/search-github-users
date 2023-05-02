@@ -6,11 +6,12 @@ import { useGlobalContext } from '../context/context';
 const Search = () => {
   const [user, setUser] = useState('');
 
-  const { requests, error } = useGlobalContext();
+  const { requests, error, searchGithubUser } = useGlobalContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (user) {
+      searchGithubUser(user);
       setUser('');
     }
   };
