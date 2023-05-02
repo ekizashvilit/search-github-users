@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useGlobalContext } from '../context/context';
 import { MdBusiness, MdLocationOn, MdLink } from 'react-icons/md';
+import { AiOutlineTwitter } from 'react-icons/ai';
 
 const Cards = () => {
   const { githubUser } = useGlobalContext();
@@ -21,7 +22,9 @@ const Cards = () => {
         <img src={avatar_url} alt={name} />
         <div>
           <h4>{name}</h4>
-          <p>@{twitter_username || 'John Doe'}</p>
+          <p>
+            <AiOutlineTwitter /> {twitter_username || 'John Doe'}
+          </p>
         </div>
         <a href={html_url}>follow</a>
       </header>
@@ -84,6 +87,8 @@ const Wrapper = styled.article`
 
     p {
       margin-bottom: 0;
+      display: flex;
+      align-items: center;
     }
 
     a {
