@@ -5,9 +5,6 @@ import './index.css';
 import { GithubProvider } from './context/context.jsx';
 import { Auth0Provider } from '@auth0/auth0-react';
 
-// dev-tavdtsbl4lprrlxw.us.auth0.com
-// NW7YoHEmc0LQKjdgqkPTUGrEQieg54eB
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Auth0Provider
     domain="dev-tavdtsbl4lprrlxw.us.auth0.com"
