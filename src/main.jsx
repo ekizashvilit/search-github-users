@@ -9,9 +9,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <Auth0Provider
     domain="dev-tavdtsbl4lprrlxw.us.auth0.com"
     clientId="NW7YoHEmc0LQKjdgqkPTUGrEQieg54eB"
-    authorizationParams={{
-      redirect_uri: window.location.origin,
-    }}
+    // authorizationParams={{
+    //   redirect_uri: window.location.origin,
+    // }}
+    redirectUri={window.location.origin}
+    cacheLocation="localstorage"
   >
     <GithubProvider>
       <App />
