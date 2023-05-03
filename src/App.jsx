@@ -18,7 +18,7 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route path="/login" element={<Login />} />
+          <Route path="login" element={<Login />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
