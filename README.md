@@ -1,4 +1,4 @@
-# Markdown Preview
+# GitHub User Search
 
 ![](./screenshot.jpg)
 ![](./screenshot2.jpg)
