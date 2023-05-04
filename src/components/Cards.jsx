@@ -23,7 +23,7 @@ const Cards = () => {
         <div>
           <h4>{name}</h4>
           <p>
-            <AiOutlineTwitter /> {twitter_username || 'John Doe'}
+            <AiOutlineTwitter /> {twitter_username || 'johndoe'}
           </p>
         </div>
         <a href={html_url}>follow</a>
